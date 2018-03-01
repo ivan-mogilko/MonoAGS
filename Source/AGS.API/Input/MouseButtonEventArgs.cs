@@ -3,8 +3,8 @@
     /// <summary>
     /// Mouse button down/up event arguments.
     /// </summary>
-    public class MouseButtonEventArgs
-	{
+    public class MouseButtonEventArgs : IClaimableEventArgs
+    {
 		/// <summary>
 		/// Initializes a new instance of the <see cref="T:AGS.API.MouseButtonEventArgs"/> class.
 		/// </summary>
@@ -35,6 +35,8 @@
         /// </summary>
         /// <value>The mouse position.</value>
         public MousePosition MousePosition { get; private set; }
-	}
+
+        public bool Claimed { get; set; }
+    }
 }
 

@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Graphics\IImageComponent.cs" />
+    <Compile Include="Input\IClaimableEventArgs.cs" />
     <Compile Include="Objects\Collisions\IPixelPerfectCollidable.cs" />
     <Compile Include="Objects\IDraggableComponent.cs" />
     <Compile Include="Objects\IRotateComponent.cs" />
@@ -283,7 +284,5 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <Folder Include="Graphics\Textures\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>

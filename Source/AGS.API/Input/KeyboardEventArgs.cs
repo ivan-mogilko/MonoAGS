@@ -157,14 +157,16 @@
     /// <summary>
     /// Event arguments for keyboard key press/release.
     /// </summary>
-	public class KeyboardEventArgs
-	{
+	public class KeyboardEventArgs : IClaimableEventArgs
+    {
 		public KeyboardEventArgs (Key key)
 		{
 			Key = key;
 		}
 
 		public Key Key { get; private set; }
-	}
+
+        public bool Claimed { get; set; }
+    }
 }
 

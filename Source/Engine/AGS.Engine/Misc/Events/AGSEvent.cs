@@ -98,6 +98,8 @@ namespace AGS.Engine
                     else if (target.EmptyBlockingEvent != null) target.EmptyBlockingEvent();
                     else if (target.EmptyEvent != null) await target.EmptyEvent();
 					else await target.Event (args);
+                    if (args is IClaimableEventArgs claimable && claimable.Claimed)
+                        break;
 				}
 			}
 			catch (Exception e) 
@@ -118,7 +120,9 @@ namespace AGS.Engine
                     else if (target.EmptyBlockingEvent != null) target.EmptyBlockingEvent();
                     else if (target.EmptyEvent != null) target.EmptyEvent();
                     else target.Event(args);
-				}
+                    if (args is IClaimableEventArgs claimable && claimable.Claimed)
+                        break;
+                }
 			}
 			catch (Exception e) 
 			{
